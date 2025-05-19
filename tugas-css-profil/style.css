@@ -1,23 +1,24 @@
+/* Reset dan font default */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
+/* Style Pada Body */
 body {
   background: #000000;
   color: #ffffff;
 }
 
 .header {
-  position: fixed;
+  position: fixed; /* Header tetap di atas saat scroll */
   top: 0;
   left: 0;
   width: 100%;
   padding: 20px 10%;
   background: transparent;
-  display: flex;
+  display: flex; /* Flexbox untuk sejajarkan isi */
   justify-content: space-between;
   align-items: center;
   z-index: 100;
@@ -37,7 +38,7 @@ body {
   font-weight: 500;
   margin-left: 35px;
 }
-
+/* Hover dan active pada navbar */
 .navbar a:hover,
 .navbar a.active {
   color: #1dcd9f;
@@ -45,7 +46,7 @@ body {
 
 .home {
   height: 100vh;
-  display: flex;
+  display: flex; /* Flexbox untuk tata letak horizontal */
   align-items: center;
   padding: 0 10%;
   justify-content: space-between;
@@ -73,9 +74,9 @@ body {
 }
 
 .btn-box a {
-  position: relative;
+  position: relative; /* Posisi relatif untuk animasi hover */
   padding: 10px 20px;
-  display: inline-flex;
+  display: inline-flex; /* Flex agar konten tengah */
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -87,31 +88,31 @@ body {
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 1px;
-  z-index: 1;
-  overflow: hidden;
+  z-index: 1; /* Untuk lapisan animasi */
+  overflow: hidden; /* Sembunyikan overflow animasi */
   transition: 0.5s;
 }
-
+/* Hover tombol */
 .btn-box a:hover {
   color: #000000;
 }
-
+/* Efek animasi latar tombol saat hover */
 .btn-box a::before {
-  content: "";
+  content: ""; /* Konten kosong untuk animasi background */
   position: absolute;
   top: 0;
   left: 0;
-  width: 0;
+  width: 0; /* Awalnya lebar 0 */
   height: 100%;
   background: #1dcd9f;
-  z-index: -1;
+  z-index: -1; /* Di belakang teks */
   transition: 1s;
 }
 
 .btn-box a:hover::before {
-  width: 100%;
+  width: 100%; /* Saat hover, isi seluruh tombol */
 }
-
+/* Ikon sosial media */
 .home-sci {
   position: absolute;
   bottom: 50px;
@@ -140,6 +141,7 @@ body {
   color: #000000;
 }
 
+/* Efek hover ikon sosial media */
 .home-sci a::before {
   content: "";
   position: absolute;
@@ -155,22 +157,24 @@ body {
   width: 100%;
 }
 
+/* Gambar profil */
 .home-image {
-  flex: 1;
+  flex: 1; /* Ambil ruang sisa */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+/* Styling gambar profil */
 .home-image img {
   width: 400px;
   height: 400px;
-  object-fit: cover;
+  object-fit: cover; /* Agar gambar tidak melar */
   border-radius: 50%;
   border: 4px solid #1dcd9f;
   box-shadow: 0 0 20px #1dcd9f;
 }
 
+/* Footer */
 footer {
   background-color: #0d0d0d;
   color: #ffffff;
